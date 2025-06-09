@@ -1,4 +1,4 @@
-import { Instagram } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/Footer.css";
@@ -26,13 +26,23 @@ function Footer() {
             <p>Condimentos naturales en polvo</p>
             <div className="footer-social">
               <a
-                href=" https://www.instagram.com/bricaayard"
+                href="https://www.instagram.com/bricaayard"
                 target="_blank"
                 aria-label="Instagram"
                 className="social-link"
               >
                 <div className="social-icon ">
                   <Instagram />
+                </div>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61553694692742"
+                target="_blank"
+                aria-label="Facebook"
+                className="social-link"
+              >
+                <div className="social-icon ">
+                  <Facebook />
                 </div>
               </a>
 
