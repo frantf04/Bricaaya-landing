@@ -462,7 +462,7 @@ const Home = () => {
             <div className="sustainability-visual">
               <div className="sustainability-image">
                 <div className="image-overlay">
-                  <img src="/src/assets/mix.png" alt="" />
+                  <img src="/mix.png" alt="" />
                 </div>
               </div>
             </div>

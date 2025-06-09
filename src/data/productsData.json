@@ -3,7 +3,7 @@
     "name": "Sazonador Completo",
     "baseDescription": "Nuestro producto estrella, una mezcla perfectamente equilibrada de ingredientes naturales que realzará el sabor de cualquier plato. Elaborado con ingredientes 100% naturales, sin aditivos ni conservantes.",
     "isStarProduct": true,
-    "src": "../src/assets/sazonador.png",
+    "src": "/sazonador.png",
     "variants": [
       {
         "id": "sazonador-completo-80g",
@@ -60,7 +60,7 @@
   "ajo-en-polvo": {
     "name": "Ajo en Polvo",
     "baseDescription": "Ajo deshidratado y molido con todo su aroma y propiedades intactas. Un ingrediente esencial en cualquier cocina, ahora en su forma más práctica y duradera.",
-    "src": "../src/assets/ajo.png",
+    "src": "/ajo.png",
     "isStarProduct": false,
     "variants": [
       {
@@ -107,7 +107,7 @@
   "cebolla-en-polvo": {
     "name": "Cebolla en Polvo",
     "baseDescription": "El sabor dulce y aromático de la cebolla en su forma más práctica. Cebolla deshidratada y molida que conserva todo el sabor y aroma del ingrediente fresco.",
-    "src": "../src/assets/cebolla.png",
+    "src": "/cebolla.png",
     "isStarProduct": false,
     "variants": [
       {
@@ -153,7 +153,7 @@
   },
   "tomate-en-polvo": {
     "name": "Tomate en Polvo",
-    "src": "../src/assets/tomate.png",
+    "src": "/tomate.png",
 
     "baseDescription": "Concentrado de tomate deshidratado, ideal para salsas y aderezos. Conserva todo el sabor y propiedades nutricionales del tomate fresco en una forma práctica y duradera.",
     "isStarProduct": false,

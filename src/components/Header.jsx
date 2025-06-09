@@ -51,7 +51,7 @@ const Header = () => {
       <div className="container header-container">
         <Link to="/" className="logo">
           <img
-            src="/src/assets/logo.svg"
+            src="/logo.svg"
             alt="Bricaaya Logo"
             className="logo-image"
           />
