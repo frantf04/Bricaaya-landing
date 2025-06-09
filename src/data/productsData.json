@@ -1,0 +1,197 @@
+{
+  "sazonador-completo": {
+    "name": "Sazonador Completo",
+    "baseDescription": "Nuestro producto estrella, una mezcla perfectamente equilibrada de ingredientes naturales que realzará el sabor de cualquier plato. Elaborado con ingredientes 100% naturales, sin aditivos ni conservantes.",
+    "isStarProduct": true,
+    "src": "../src/assets/sazonador.png",
+    "variants": [
+      {
+        "id": "sazonador-completo-80g",
+        "size": "80g",
+        "price": "RD$325.00",
+        "isDefault": true
+      },
+      {
+        "id": "sazonador-completo-170g",
+        "size": "170g",
+        "price": "RD$750.00",
+        "isDefault": false
+      }
+    ],
+    "ingredients": [
+      "Cebolla",
+      "Ajo",
+      "Puerro",
+      "Espinaca",
+      "Ají gustoso",
+      "Cilantro",
+      "Verdecito",
+      "Apio",
+      "Orégano",
+      "Sal"
+    ],
+    "benefits": [
+      "Realza el sabor natural de tus comidas",
+      "100% ingredientes naturales",
+      "Sin aditivos ni conservantes",
+      "Versátil para todo tipo de platos",
+      "Práctico y fácil de usar"
+    ],
+    "usage": "Añade una cucharadita (aproximadamente 5g) por cada 500g de alimento. Puedes usarlo durante la cocción o como toque final en tus platos. Ideal para carnes, pescados, arroces, sopas, ensaladas y verduras.",
+    "imageClass": "sazonador-detail-image",
+    "recipes": [
+      {
+        "title": "Pollo al horno con sazonador completo",
+        "description": "Un plato sencillo pero lleno de sabor gracias a nuestro sazonador completo.",
+        "imageClass": "recipe1-image"
+      },
+      {
+        "title": "Arroz con verduras sazonado",
+        "description": "Un acompañamiento perfecto para cualquier comida, realzado con nuestro sazonador.",
+        "imageClass": "recipe2-image"
+      },
+      {
+        "title": "Sopa de verduras aromática",
+        "description": "Una sopa reconfortante con el toque especial de nuestro sazonador completo.",
+        "imageClass": "recipe3-image"
+      }
+    ]
+  },
+  "ajo-en-polvo": {
+    "name": "Ajo en Polvo",
+    "baseDescription": "Ajo deshidratado y molido con todo su aroma y propiedades intactas. Un ingrediente esencial en cualquier cocina, ahora en su forma más práctica y duradera.",
+    "src": "../src/assets/ajo.png",
+    "isStarProduct": false,
+    "variants": [
+      {
+        "id": "ajo-en-polvo-80g",
+        "size": "80g",
+        "price": "RD$190.00",
+        "isDefault": true
+      },
+      {
+        "id": "ajo-en-polvo-130g",
+        "size": "130g",
+        "price": "RD$280.00",
+        "isDefault": false
+      }
+    ],
+    "ingredients": ["100% Ajo deshidratado"],
+    "benefits": [
+      "Conserva todas las propiedades del ajo fresco",
+      "Mayor vida útil que el ajo fresco",
+      "Fácil de dosificar",
+      "Sin aditivos ni conservantes",
+      "Propiedades antioxidantes naturales"
+    ],
+    "usage": "Añade 1/4 de cucharadita (aproximadamente 1g) por cada diente de ajo que reemplaces. Ideal para salsas, adobos, marinados, guisos y todo tipo de platos que requieran el sabor característico del ajo.",
+    "imageClass": "ajo-detail-image",
+    "recipes": [
+      {
+        "title": "Pan de ajo casero",
+        "description": "Un acompañamiento perfecto para pastas y ensaladas con nuestro ajo en polvo.",
+        "imageClass": "recipe4-image"
+      },
+      {
+        "title": "Alioli casero",
+        "description": "Una salsa versátil y deliciosa preparada con nuestro ajo en polvo.",
+        "imageClass": "recipe5-image"
+      },
+      {
+        "title": "Marinado para carnes",
+        "description": "Dale un sabor especial a tus carnes con este marinado a base de ajo en polvo.",
+        "imageClass": "recipe6-image"
+      }
+    ]
+  },
+  "cebolla-en-polvo": {
+    "name": "Cebolla en Polvo",
+    "baseDescription": "El sabor dulce y aromático de la cebolla en su forma más práctica. Cebolla deshidratada y molida que conserva todo el sabor y aroma del ingrediente fresco.",
+    "src": "../src/assets/cebolla.png",
+    "isStarProduct": false,
+    "variants": [
+      {
+        "id": "cebolla-en-polvo-60g",
+        "size": "60g",
+        "price": "RD$190.00",
+        "isDefault": true
+      },
+      {
+        "id": "cebolla-en-polvo-90g",
+        "size": "90g",
+        "price": "RD$260.00",
+        "isDefault": false
+      }
+    ],
+    "ingredients": ["100% Cebolla deshidratada"],
+    "benefits": [
+      "Sabor dulce y aromático",
+      "Sin lágrimas al cocinar",
+      "Larga duración",
+      "Fácil de almacenar",
+      "Sin aditivos ni conservantes"
+    ],
+    "usage": "Añade 1/2 cucharadita (aproximadamente 2g) por cada cuarto de cebolla que reemplaces. Ideal para sopas, salsas, guisos, adobos y cualquier plato que requiera el sabor característico de la cebolla.",
+    "imageClass": "cebolla-detail-image",
+    "recipes": [
+      {
+        "title": "Sopa de cebolla francesa",
+        "description": "Una versión simplificada de este clásico francés con nuestra cebolla en polvo.",
+        "imageClass": "recipe7-image"
+      },
+      {
+        "title": "Aderezo para ensaladas",
+        "description": "Un aderezo aromático y lleno de sabor con nuestra cebolla en polvo.",
+        "imageClass": "recipe8-image"
+      },
+      {
+        "title": "Dip de cebolla",
+        "description": "Un acompañamiento perfecto para chips y vegetales con nuestra cebolla en polvo.",
+        "imageClass": "recipe9-image"
+      }
+    ]
+  },
+  "tomate-en-polvo": {
+    "name": "Tomate en Polvo",
+    "src": "../src/assets/tomate.png",
+
+    "baseDescription": "Concentrado de tomate deshidratado, ideal para salsas y aderezos. Conserva todo el sabor y propiedades nutricionales del tomate fresco en una forma práctica y duradera.",
+    "isStarProduct": false,
+    "variants": [
+      {
+        "id": "tomate-en-polvo-75g",
+        "size": "75g",
+        "price": "RD$225.00",
+        "isDefault": true
+      }
+
+    ],
+    "ingredients": ["100% Tomate deshidratado"],
+    "benefits": [
+      "Rico en licopeno natural",
+      "Sabor intenso a tomate",
+      "Larga duración",
+      "Fácil de almacenar",
+      "Sin aditivos ni conservantes"
+    ],
+    "usage": "Añade 1 cucharada (aproximadamente 5g) por cada tomate mediano que reemplaces. Ideal para salsas, sopas, guisos, pizzas y cualquier plato que requiera sabor a tomate. También puede rehidratarse con agua caliente para obtener una pasta de tomate.",
+    "imageClass": "tomate-detail-image",
+    "recipes": [
+      {
+        "title": "Salsa de tomate casera",
+        "description": "Una salsa versátil y rápida de preparar con nuestro tomate en polvo.",
+        "imageClass": "recipe10-image"
+      },
+      {
+        "title": "Sopa de tomate cremosa",
+        "description": "Una sopa reconfortante con el intenso sabor de nuestro tomate en polvo.",
+        "imageClass": "recipe11-image"
+      },
+      {
+        "title": "Aderezo para ensaladas",
+        "description": "Un aderezo fresco y sabroso con nuestro tomate en polvo como ingrediente principal.",
+        "imageClass": "recipe12-image"
+      }
+    ]
+  }
+}
