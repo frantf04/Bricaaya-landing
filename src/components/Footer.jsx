@@ -1,20 +1,27 @@
 import { Facebook, Instagram } from "lucide-react";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/Footer.css";
 import productsData from "../data/productsData.json";
 
 function Footer() {
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const headerHeight = 80;
-      const elementPosition = element.offsetTop - headerHeight;
+  const navigate = useNavigate();
 
-      window.scrollTo({
-        top: elementPosition,
-        behavior: "smooth",
-      });
+  const scrollToSection = (sectionId) => {
+    const headerHeight = 80;
+    const scrollToElement = () => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const position = element.offsetTop - headerHeight;
+        window.scrollTo({ top: position, behavior: "smooth" });
+      }
+    };
+
+    if (window.location.pathname === "/") {
+      scrollToElement();
+    } else {
+      navigate("/");
+      setTimeout(scrollToElement, 100); // da tiempo a que se renderice
     }
   };
   return (
@@ -66,7 +73,17 @@ function Footer() {
               {Object.keys(productsData)
                 .slice(0, 4)
                 .map((id) => (
-                  <Link key={id} to={`/producto/${id}`} className="footer-link">
+                  <Link
+                    key={id}
+                    to={`/producto/${id}`}
+                    className="footer-link"
+                    onClick={
+                      () =>
+                        setTimeout(() => {
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }, 50) // delay pequeño para que ocurra justo después del cambio de ruta
+                    }
+                  >
                     {productsData[id].name}
                   </Link>
                 ))}
