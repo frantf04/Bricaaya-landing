@@ -31,11 +31,12 @@
       "Sal"
     ],
     "benefits": [
-      "Realza el sabor natural de tus comidas",
-      "100% ingredientes naturales",
-      "Sin aditivos ni conservantes",
-      "Versátil para todo tipo de platos",
-      "Práctico y fácil de usar"
+      "Mejora el sabor natural de tus comidas sin necesidad de químicos",
+      "100% ingredientes naturales deshidratados",
+      "Rico en antioxidantes naturales (ajo, cebolla, cilantro)",
+      "Aporta nutrientes esenciales como hierro y vitamina K (espinaca)",
+      "Versátil: ideal para carnes, sopas, arroces y más",
+      "Sin aditivos ni conservantes"
     ],
     "usage": "Añade una cucharadita (aproximadamente 5g) por cada 500g de alimento. Puedes usarlo durante la cocción o como toque final en tus platos. Ideal para carnes, pescados, arroces, sopas, ensaladas y verduras.",
     "imageClass": "sazonador-detail-image",
@@ -80,9 +81,10 @@
     "benefits": [
       "Conserva todas las propiedades del ajo fresco",
       "Mayor vida útil que el ajo fresco",
-      "Fácil de dosificar",
-      "Sin aditivos ni conservantes",
-      "Propiedades antioxidantes naturales"
+      "Fácil de dosificar y usar",
+      "Propiedades antioxidantes y antimicrobianas naturales (alicina)",
+      "Refuerza el sistema inmunológico de forma natural",
+      "Sin aditivos ni conservantes"
     ],
     "usage": "Añade 1/4 de cucharadita (aproximadamente 1g) por cada diente de ajo que reemplaces. Ideal para salsas, adobos, marinados, guisos y todo tipo de platos que requieran el sabor característico del ajo.",
     "imageClass": "ajo-detail-image",
@@ -125,10 +127,11 @@
     ],
     "ingredients": ["100% Cebolla deshidratada"],
     "benefits": [
-      "Sabor dulce y aromático",
-      "Sin lágrimas al cocinar",
-      "Larga duración",
-      "Fácil de almacenar",
+      "Sabor dulce y aromático en segundos",
+      "Sin lágrimas ni complicaciones al cocinar",
+      "Rica en quercetina, un potente antioxidante natural",
+      "Contribuye a la salud cardiovascular",
+      "Práctica, duradera y fácil de almacenar",
       "Sin aditivos ni conservantes"
     ],
     "usage": "Añade 1/2 cucharadita (aproximadamente 2g) por cada cuarto de cebolla que reemplaces. Ideal para sopas, salsas, guisos, adobos y cualquier plato que requiera el sabor característico de la cebolla.",
@@ -164,15 +167,15 @@
         "price": "RD$225.00",
         "isDefault": true
       }
-
     ],
     "ingredients": ["100% Tomate deshidratado"],
     "benefits": [
-      "Rico en licopeno natural",
-      "Sabor intenso a tomate",
-      "Larga duración",
-      "Fácil de almacenar",
-      "Sin aditivos ni conservantes"
+      "Rico en licopeno, un antioxidante que favorece la salud celular",
+      "Sabor concentrado e intenso a tomate",
+      "Ideal para enriquecer salsas y platos sin desperdicio",
+      "Fácil de almacenar y de larga duración",
+      "Sin aditivos ni conservantes",
+      "Alternativa práctica al tomate fresco o enlatado"
     ],
     "usage": "Añade 1 cucharada (aproximadamente 5g) por cada tomate mediano que reemplaces. Ideal para salsas, sopas, guisos, pizzas y cualquier plato que requiera sabor a tomate. También puede rehidratarse con agua caliente para obtener una pasta de tomate.",
     "imageClass": "tomate-detail-image",

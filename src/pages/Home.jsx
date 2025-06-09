@@ -205,11 +205,10 @@ const Home = () => {
               <div className="step-content">
                 <h3>Envasado sostenible</h3>
                 <p>
-                  Materiales eco-friendly que preservan la frescura y protegen
-                  el medio ambiente
+                  Utilizamos envases duraderos y reciclables que mantienen la calidad del producto y promueven el consumo consciente.
                 </p>
                 <div className="step-features">
-                  <span>Eco-friendly</span>
+                  <span>Eco-responsable</span>
                   <span>Preserva frescura</span>
                 </div>
               </div>
@@ -434,9 +433,9 @@ const Home = () => {
                 <div className="feature fade-in-scroll">
                   <div className="feature-icon">🌱</div>
                   <div className="feature-content">
-                    <strong>Envases biodegradables</strong>
+                    <strong>Envases reciclables</strong>
                     <span>
-                      Materiales que se integran naturalmente al ecosistema
+                      Materiales diseñados para ser reciclados y reutilizados, reduciendo el impacto ambiental.
                     </span>
                   </div>
                 </div>

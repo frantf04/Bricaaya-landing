@@ -62,7 +62,7 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  user-select: none;
+  /* user-select: none; */
 
 }
 
@@ -466,10 +466,11 @@ ul {
 }
 
 .product-cta {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-2);
-  padding: var(--space-3) var(--space-6);
+  padding: var(--space-3) var(--space-4);
   border-radius: var(--radius);
   font-weight: 600;
   transition: var(--transition);
@@ -1441,8 +1442,8 @@ ul {
 }
 
 .product-cta {
-  margin-top: var(--space-8);
-  padding-top: var(--space-6);
+  /* margin-top: var(--space-8); */
+  /* padding-top: var(--space-6); */
   border-top: 1px solid var(--gray-200);
 }
 
@@ -1620,7 +1621,7 @@ ul {
 
 .button-to-top {
   position: fixed;
-  bottom: 20px;
+  bottom: 90px;
   right: 20px;
   background: var(--primary);
   color: var(--white);
@@ -1632,6 +1633,7 @@ ul {
   transition: var(--transition);
   cursor: pointer;
   opacity: 0;
+  z-index: 100;
 }
 .button-to-top.visible{
   opacity: 1;
