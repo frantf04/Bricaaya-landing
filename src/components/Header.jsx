@@ -6,6 +6,8 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const menuRef = useRef(null);
+  const buttonRef = useRef(null);
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -16,21 +18,22 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        isMobileMenuOpen &&
-        menuRef.current &&
-        !menuRef.current.contains(event.target)
-      ) {
-        setIsMobileMenuOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isMobileMenuOpen]);
+ useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (
+      isMobileMenuOpen &&
+      menuRef.current &&
+      !menuRef.current.contains(event.target) &&
+      buttonRef.current &&
+      !buttonRef.current.contains(event.target)
+    ) {
+      setIsMobileMenuOpen(false);
+    }
+  };
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => document.removeEventListener("mousedown", handleClickOutside);
+}, [isMobileMenuOpen]);
+
 
   const scrollToSection = (sectionId) => {
     if (window.location.pathname === "/") {
@@ -61,25 +64,40 @@ const Header = () => {
           <img src="/logo.svg" alt="Bricaaya Logo" className="logo-image" />
         </Link>
 
-        <nav ref={menuRef} className={`main-nav ${isMobileMenuOpen ? "open" : ""}`}>
+        <nav
+          ref={menuRef}
+          className={`main-nav ${isMobileMenuOpen ? "open" : ""}`}
+        >
           <ul>
             <li>
-              <button onClick={() => scrollToSection("productos")} className="nav-button">
+              <button
+                onClick={() => scrollToSection("productos")}
+                className="nav-button"
+              >
                 Productos
               </button>
             </li>
             <li>
-              <button onClick={() => scrollToSection("proceso")} className="nav-button">
+              <button
+                onClick={() => scrollToSection("proceso")}
+                className="nav-button"
+              >
                 Proceso
               </button>
             </li>
             <li>
-              <button onClick={() => scrollToSection("sostenibilidad")} className="nav-button">
+              <button
+                onClick={() => scrollToSection("sostenibilidad")}
+                className="nav-button"
+              >
                 Sostenibilidad
               </button>
             </li>
             <li>
-              <button onClick={() => scrollToSection("contacto")} className="nav-button">
+              <button
+                onClick={() => scrollToSection("contacto")}
+                className="nav-button"
+              >
                 Contacto
               </button>
             </li>
@@ -87,8 +105,12 @@ const Header = () => {
         </nav>
 
         <button
-          className="mobile-menu-button"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          ref={buttonRef}
+          className={`mobile-menu-button ${isMobileMenuOpen ? "open" : ""}`}
+          aria-expanded={isMobileMenuOpen}    
+          onClick={() => {
+            setIsMobileMenuOpen((prev) => !prev);
+          }}
           aria-label="Toggle menu"
         >
           <span></span>
