@@ -26,7 +26,7 @@ Landing page corporativa desarrollada para **Bricaaya**, una marca dominicana de
 1. Clona el repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/bricaaya-landing.git
+git clone https://github.com/frantf04/bricaaya-landing.git
 cd bricaaya-landing
 ```
 2. Instala dependencias::
