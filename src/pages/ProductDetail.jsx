@@ -184,20 +184,6 @@ const ProductDetail = () => {
 
             <div className="product-price">
               <span className="price">{selectedVariant.price}</span>
-              {product.variants.length > 1 && (
-                <span className="price-per-gram">
-                  (
-                  {(
-                    Number.parseFloat(
-                      selectedVariant.price.replace(/[^\d.]/g, "")
-                    ) /
-                    Number.parseFloat(
-                      selectedVariant.size.replace(/[^\d.]/g, "")
-                    )
-                  ).toFixed(2)}{" "}
-                  por gramo)
-                </span>
-              )}
             </div>
 
             <p className="product-description">{product.baseDescription}</p>
