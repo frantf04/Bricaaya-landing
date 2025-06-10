@@ -481,9 +481,18 @@ ul {
   font-family: inherit;
 }
 
+
 .variant-selector .product-cta {
   padding: 0;
+  animation: scale .5s infinite alternate;
 }
+
+@keyframes scale {
+  to{
+    transform: scale(1.03);
+  }
+}
+
 .product-cta button {
   width: 100%;
   text-align: center;
