@@ -4,25 +4,22 @@ import { useState, useEffect, use } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import productsData from "../data/productsData.json";
+import { useCart } from "../context/CartContext";
+import { CarTaxiFront, ShoppingCart } from "lucide-react";
+import "../styles/Cart.css";
 
-const ProductDetail = () => {
+const ProductDetail = ({ isOpen, setIsOpen }) => {
   const { productId } = useParams();
   const navigate = useNavigate();
   const [product, setProduct] = useState(null);
   const [selectedVariant, setSelectedVariant] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const { addToCart } = useCart();
 
-  const handleWhatsappClick = () => {
-    const phone = "18295561426";
-    const productName = product.name;
-    const size = selectedVariant.size;
-    const price = selectedVariant.price;
-    const message = `¡Hola! Estoy interesado en comprar el producto "${productName}" (${size}) con precio de ${price}. ¿Está disponible?`;
+  const { cart, orderNumber, customerInfo } = useCart();
 
-    const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(
-      message
-    )}`;
-    window.open(whatsappURL, "_blank");
+  const handleAddToCart = () => {
+    addToCart(product, selectedVariant);
   };
 
   useState(() => {
@@ -82,21 +79,6 @@ const ProductDetail = () => {
     }, 100);
   };
 
-  const handleContactClick = () => {
-    navigate("/");
-    setTimeout(() => {
-      const element = document.getElementById("contacto");
-      if (element) {
-        const headerHeight = 80;
-        const elementPosition = element.offsetTop - headerHeight;
-        window.scrollTo({
-          top: elementPosition,
-          behavior: "smooth",
-        });
-      }
-    }, 100);
-  };
-
   if (isLoading) {
     return (
       <div className="loading-container">
@@ -116,8 +98,6 @@ const ProductDetail = () => {
 
   return (
     <div className="product-detail-page">
-      <Header />
-
       <div className="product-detail-header">
         <div className="container">
           <button onClick={handleBackClick} className="back-link">
@@ -154,7 +134,7 @@ const ProductDetail = () => {
             <h2>{product.name}</h2>
 
             {/* Selector de variantes */}
-            {product.variants.length > 1 && (
+            {product.variants.length >= 1 && (
               <div className="variant-selector">
                 <h3>Presentación:</h3>
                 <div className="variant-options">
@@ -172,7 +152,16 @@ const ProductDetail = () => {
                   ))}
                   <div className="product-cta">
                     <button
-                      onClick={handleWhatsappClick}
+                      onClick={handleAddToCart}
+                      className="cta-button whatsapp"
+                    >
+                      <ShoppingCart /> Añadir al carrito
+                    </button>
+                    <button
+                      onClick={() => {
+                        handleAddToCart();
+                        setIsOpen(true);
+                      }}
                       className="cta-button whatsapp"
                     >
                       Realizar pedido por WhatsApp

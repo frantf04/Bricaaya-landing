@@ -479,10 +479,11 @@ ul {
   border: none;
   cursor: pointer;
   font-family: inherit;
+  flex-wrap: wrap;
 }
 
 
-.variant-selector .product-cta {
+.variant-selector .product-cta  {
   padding: 0;
   animation: scale .5s infinite alternate;
 }

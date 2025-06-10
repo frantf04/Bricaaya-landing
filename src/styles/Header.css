@@ -77,7 +77,11 @@
 .nav-button:hover::after {
   width: 100%;
 }
-
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
 .mobile-menu-button {
   display: none;
   flex-direction: column;

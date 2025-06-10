@@ -4,15 +4,23 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ButtonToTop from "./components/ButtonToTop";
 import AppRouter from "./routes/AppRouter.routes";
+import { CartProvider } from "./context/CartContext";
+import CartModal from "./components/CartModal";
+import { useState } from "react";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="App">
-      <Header />
-      <AppRouter />
-      <Footer />
-      <ButtonToTop/>
-    </div>
+    <CartProvider>
+      <div className="App">
+        <Header isOpen={isOpen} setIsOpen={setIsOpen}/>
+        <AppRouter isOpen={isOpen} setIsOpen={setIsOpen}/>
+        <CartModal isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Footer />
+        <ButtonToTop />
+      </div>
+    </CartProvider>
   );
 }
 

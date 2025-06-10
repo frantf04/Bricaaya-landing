@@ -1,8 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import "../styles/Header.css";
 import { Link, useNavigate } from "react-router-dom";
+import Cart from "./CartButton";
+import CartButton from "./CartButton";
 
-const Header = () => {
+const Header = ({ isOpen, setIsOpen }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const menuRef = useRef(null);
@@ -18,22 +20,21 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
- useEffect(() => {
-  const handleClickOutside = (event) => {
-    if (
-      isMobileMenuOpen &&
-      menuRef.current &&
-      !menuRef.current.contains(event.target) &&
-      buttonRef.current &&
-      !buttonRef.current.contains(event.target)
-    ) {
-      setIsMobileMenuOpen(false);
-    }
-  };
-  document.addEventListener("mousedown", handleClickOutside);
-  return () => document.removeEventListener("mousedown", handleClickOutside);
-}, [isMobileMenuOpen]);
-
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        isMobileMenuOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
+      ) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isMobileMenuOpen]);
 
   const scrollToSection = (sectionId) => {
     if (window.location.pathname === "/") {
@@ -103,20 +104,23 @@ const Header = () => {
             </li>
           </ul>
         </nav>
+        <div className="header-actions">
+          <CartButton isOpen={isOpen} setIsOpen={setIsOpen} />
 
-        <button
-          ref={buttonRef}
-          className={`mobile-menu-button ${isMobileMenuOpen ? "open" : ""}`}
-          aria-expanded={isMobileMenuOpen}    
-          onClick={() => {
-            setIsMobileMenuOpen((prev) => !prev);
-          }}
-          aria-label="Toggle menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+          <button
+            ref={buttonRef}
+            className={`mobile-menu-button ${isMobileMenuOpen ? "open" : ""}`}
+            aria-expanded={isMobileMenuOpen}
+            onClick={() => {
+              setIsMobileMenuOpen((prev) => !prev);
+            }}
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
     </header>
   );
