@@ -6,22 +6,34 @@ import productsData from "../data/productsData.json";
 
 function Footer() {
   const navigate = useNavigate();
-
   const scrollToSection = (sectionId) => {
-    const headerHeight = 80;
-    const scrollToElement = () => {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        const position = element.offsetTop - headerHeight;
-        window.scrollTo({ top: position, behavior: "smooth" });
-      }
-    };
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerHeight = 80;
+      const elementPosition = element.offsetTop - headerHeight;
 
-    if (window.location.pathname === "/") {
-      scrollToElement();
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth",
+      });
     } else {
+      if (window.location.pathname !== "/") {
+        const headerHeight = 80;
+        window.scrollY = 0; // Reset scroll position
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
       navigate("/");
-      setTimeout(scrollToElement, 100); // da tiempo a que se renderice
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const headerHeight = 80;
+          const elementPosition = element.offsetTop - headerHeight;
+          window.scrollTo({ top: elementPosition, behavior: "smooth" });
+        }
+      }, 100);
     }
   };
   return (
@@ -73,17 +85,7 @@ function Footer() {
               {Object.keys(productsData)
                 .slice(0, 4)
                 .map((id) => (
-                  <Link
-                    key={id}
-                    to={`/producto/${id}`}
-                    className="footer-link"
-                    onClick={
-                      () =>
-                        setTimeout(() => {
-                          window.scrollTo({ top: 0, behavior: "smooth" });
-                        }, 50) // delay pequeño para que ocurra justo después del cambio de ruta
-                    }
-                  >
+                  <Link key={id} to={`/producto/${id}`} className="footer-link">
                     {productsData[id].name}
                   </Link>
                 ))}
