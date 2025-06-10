@@ -205,7 +205,8 @@ const Home = () => {
               <div className="step-content">
                 <h3>Envasado sostenible</h3>
                 <p>
-                  Utilizamos envases duraderos y reciclables que mantienen la calidad del producto y promueven el consumo consciente.
+                  Utilizamos envases duraderos y reciclables que mantienen la
+                  calidad del producto y promueven el consumo consciente.
                 </p>
                 <div className="step-features">
                   <span>Eco-responsable</span>
@@ -306,10 +307,7 @@ const Home = () => {
                 .map((product) => (
                   <div key={product.id} className="product-card fade-in-scroll">
                     <div className="product-image-container">
-                      <img
-                        src={product.src}
-                        alt={product.name}
-                      />
+                      <img src={product.src} alt={product.name} />
 
                       <div className="product-overlay">
                         <Link
@@ -435,7 +433,8 @@ const Home = () => {
                   <div className="feature-content">
                     <strong>Envases reciclables</strong>
                     <span>
-                      Materiales diseñados para ser reciclados y reutilizados, reduciendo el impacto ambiental.
+                      Materiales diseñados para ser reciclados y reutilizados,
+                      reduciendo el impacto ambiental.
                     </span>
                   </div>
                 </div>
@@ -496,20 +495,29 @@ const Home = () => {
           <div className="contact-content">
             <div className="contact-info">
               <div className="contact-methods">
-                <div className="contact-method fade-in-scroll">
-                  <div className="method-icon">📧</div>
-                  <div className="method-info">
-                    <strong>Email</strong>
-                    <span>Bricaayard@gmail.com</span>
+                <a href="mailto:bricaayard@gmail.com"></a>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=bricaayard@gmail.com"
+                  target="_blank"
+                >
+                  <div className="contact-method fade-in-scroll">
+                    <div className="method-icon">📧</div>
+                    <div className="method-info">
+                      <strong>Email</strong>
+                      <span>bricaayard@gmail.com</span>
+                    </div>
                   </div>
-                </div>
-                <div className="contact-method fade-in-scroll">
-                  <div className="method-icon">📱</div>
-                  <div className="method-info">
-                    <strong>Teléfono</strong>
-                    <span>+1 (829) 556-1426</span>
+                </a>
+
+                <a href="https://wa.me/18495561426" target="_blank">
+                  <div className="contact-method fade-in-scroll">
+                    <div className="method-icon">📱</div>
+                    <div className="method-info">
+                      <strong>Teléfono</strong>
+                      <span>+1 (829) 556-1426</span>
+                    </div>
                   </div>
-                </div>
+                </a>
                 <div className="contact-method fade-in-scroll">
                   <div className="method-icon">📍</div>
                   <div className="method-info">
