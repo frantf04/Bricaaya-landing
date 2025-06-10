@@ -120,7 +120,7 @@ function Footer() {
             &copy; {new Date().getFullYear()} Bricaaya. Todos los derechos
             reservados.
           </p>
-          <p>Powered by JFODEV SOFTWARE</p>
+          <p>Powered by JFODEV (Johan Olmos)</p>
         </div>
       </div>
     </footer>
