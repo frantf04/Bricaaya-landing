@@ -2,9 +2,9 @@
 
 Landing page corporativa desarrollada para **Bricaaya**, una marca dominicana de condimentos naturales elaborados artesanalmente. El sitio tiene como objetivo comunicar los valores de la marca (naturalidad, sostenibilidad y autenticidad) mediante un diseño moderno, minimalista y responsivo.
 
-> 🔗 [Ver sitio en producción](https://www.bricaaya.com)
+>  [Ver sitio en producción](https://www.bricaaya.com)
 
-## 🌐 Tecnologías utilizadas
+##  Tecnologías utilizadas
 
 - **React.js**
 - **Vite**
@@ -13,7 +13,7 @@ Landing page corporativa desarrollada para **Bricaaya**, una marca dominicana de
 - **Lucide React Icons**
 - **JavaScript (ES6+)**
 
-## ⚙️ Funcionalidades
+##  Funcionalidades
 
 - Navegación fluida entre secciones internas (scroll suave con compensación de header)
 - Presentación de productos dinámicos desde archivo JSON
@@ -47,23 +47,6 @@ npm run dev
 ```bash
 http://localhost:5173
 ```
-## Estructura del proyecto
-`
-src/
-├── assets/              # Imágenes y logos
-├── components/          # Componentes reutilizables (Navbar, Footer, etc.)
-├── data/                # Archivo JSON con datos de productos
-├── pages/               # Secciones principales de la landing
-├── styles/              # Archivos CSS modularizados
-├── App.jsx              # Enrutador principal
-└── main.jsx             # Punto de entrada
-`
-
-## 🧪 Mejores prácticas
-- Separación de lógica y presentación
-- Uso de React Router para navegación entre secciones internas
-- Scroll con compensación para navegación desde rutas externas
-- Código limpio, modular y con buenas prácticas de accesibilidad
 
  ## Build de producción 
 
