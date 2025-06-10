@@ -1,12 +1,67 @@
-# React + Vite
+# Bricaaya – Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page corporativa desarrollada para **Bricaaya**, una marca dominicana de condimentos naturales elaborados artesanalmente. El sitio tiene como objetivo comunicar los valores de la marca (naturalidad, sostenibilidad y autenticidad) mediante un diseño moderno, minimalista y responsivo.
 
-Currently, two official plugins are available:
+>  [Ver sitio en producción](https://www.bricaaya.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+- **React.js**
+- **Vite**
+- **React Router**
+- **CSS Modules**
+- **Lucide React Icons**
+- **JavaScript (ES6+)**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##  Funcionalidades
+
+- Navegación fluida entre secciones internas (scroll suave con compensación de header)
+- Presentación de productos dinámicos desde archivo JSON
+- Diseño responsive para todo tipo de dispositivos
+- Contacto directo vía **WhatsApp**
+- Integración con redes sociales (Instagram y Facebook)
+- Footer con enlaces funcionales y scroll-to-section inteligente
+
+## 🚀 Instalación local
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/frantf04/bricaaya-landing.git
+cd bricaaya-landing
+```
+2. Instala dependencias::
+
+```bash
+npm install
+```
+
+3. Inicia el entorno de desarrollo:
+
+```bash
+npm run dev
+
+```
+
+4. Abre en tu navegador::
+
+```bash
+http://localhost:5173
+```
+
+ ## Build de producción 
+
+ ```
+ npm run build
+ ```
+El sitio se compila en la carpeta /dist.
+
+## Licencia
+Este proyecto fue desarrollado por Johan Olmos (JFODEV) y se encuentra bajo licencia MIT.
+
+¿Te gustó este proyecto? No olvides darle una ⭐ en GitHub o compartirlo si te fue útil.
+
+
+---
+
+ `https://github.com/frantf04/bricaaya-landing.git` 
+ 
