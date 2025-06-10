@@ -175,7 +175,7 @@ const ProductDetail = () => {
                       onClick={handleWhatsappClick}
                       className="cta-button whatsapp"
                     >
-                      Consultar por WhatsApp
+                      Realizar pedido por WhatsApp
                     </button>
                   </div>
                 </div>
