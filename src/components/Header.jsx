@@ -56,6 +56,7 @@ const Header = ({ isOpen, setIsOpen }) => {
       }, 100);
     }
     setIsMobileMenuOpen(false);
+    setIsOpen(false)
   };
 
   return (
