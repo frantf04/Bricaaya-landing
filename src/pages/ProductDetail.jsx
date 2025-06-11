@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, use } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import Header from "../components/Header";
 import productsData from "../data/productsData.json";
 import { useCart } from "../context/CartContext";
@@ -15,6 +15,7 @@ const ProductDetail = ({ isOpen, setIsOpen }) => {
   const [selectedVariant, setSelectedVariant] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const { addToCart } = useCart();
+  const location = useLocation();
 
   const { cart, orderNumber, customerInfo } = useCart();
 
@@ -22,10 +23,11 @@ const ProductDetail = ({ isOpen, setIsOpen }) => {
     addToCart(product, selectedVariant);
   };
 
-  useState(() => {
-    // reset scroll
-    window.scrollTo(0, 0);
-  }, []);
+ useEffect(() => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}, [location.pathname]);
+
+
   useEffect(() => {
     // Buscar el producto base por ID o por variante
     let foundProduct = null;
