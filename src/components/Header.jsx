@@ -62,9 +62,9 @@ const Header = ({ isOpen, setIsOpen }) => {
   return (
     <header className={`header ${isScrolled ? "scrolled" : ""}`}>
       <div className="container header-container">
-        <Link to="/" className="logo">
+        <a href="/" className="logo">
           <img src="/logo.svg" alt="Bricaaya Logo" className="logo-image" />
-        </Link>
+        </a>
 
         <nav
           ref={menuRef}
